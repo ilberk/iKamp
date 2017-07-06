@@ -1,13 +1,14 @@
 <?php
 
-class Customer {
+class Customer 
+{
     public $customerID;
     public $username;
     public $name;
     public $surname;
     public $phone;
 
-    //Customer profilini set eder.
+    //Sets the customer profile
     public function setProfile($customerID, $username, $name, $surname, $phone)
     {
         $this->customerID = $customerID;
@@ -17,7 +18,7 @@ class Customer {
         $this->phone = $phone;
     }
 
-    //Customer adresini set eder.
+    //Sets the customer adress.
     public function setAddress(CustomerAddress $addressID, CustomerAddress $city, CustomerAddress $address)
     {
         $this->addressID = $addressID;
@@ -25,7 +26,8 @@ class Customer {
         $this->address = $address;
     }
 }
-class  CustomerAddress {
+class  CustomerAddress 
+{
     public $addressID;
     public $city;
     public $address;
@@ -37,7 +39,8 @@ class  CustomerAddress {
     }
 }
 
-class Restaurant {
+class Restaurant 
+{
     public $restID;
     public $restAddress;
     public $restPhone;
@@ -51,7 +54,8 @@ class Restaurant {
     }
 }
 
-class RestMenu {
+class RestMenu 
+{
     public $menuID;
     public $menuItem;
     public $itemPrice;
@@ -70,7 +74,8 @@ class RestMenu {
 
 }
 
-class Order {
+class Order 
+{
     public $orderID;
     public $orderItem;
     public $totalPrice;
@@ -88,6 +93,3 @@ class Order {
         return $this->orderItem;
     }
 }
-
-
-
